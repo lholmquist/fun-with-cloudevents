@@ -1,0 +1,29 @@
+Post /event HTTP/1.0
+Host: example.com
+Content-Type: application/json
+ce-specversion: 1.0
+ce-type: com.nodeshift.create
+ce-source: nodeshift.dev
+ce-id: 123456
+
+{
+  "action": "createThing",
+  "item": "2187"
+}
+
+
+
+Post /event HTTP/1.0
+Host: example.com
+Content-Type: application/cloudevents+json
+
+{
+  "specversion": "1.0"
+  "type": "com.nodeshift.create"
+  "source": "nodeshift.dev"
+  "id": "123456"
+  "data": {
+    "action": "createThing",
+    "item": "2187"
+  }
+}
